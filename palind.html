@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>palindrome</title>  
+    </head>
+    <body>
+        <p>enter the number</p>
+        <input id="n">
+        <button onclick="pali()">click</button>
+        <p id="l">answer</p>
+        <script>
+            function pali()
+               {
+                var e;var j;f=0;
+                var n=document.getElementById("n").value;
+                e=n;
+                 while(n>0)
+                 {
+                    j=n%10;
+                    sum=(sum*10)+j;
+                    n=n/10;
+                 }
+                 if(e==f)
+                 {
+                   document.getElementById("l").innerHTML="palindrome";
+                 }
+                 else
+                 {
+                    document.getElementById("l").innerHTML="not plalindrome";
+                 }
+                 
+               }
+        </script>
+    </body>
+</html>
