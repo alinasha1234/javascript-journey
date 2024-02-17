@@ -6,27 +6,26 @@
         <p>enter the number</p>
         <input id="n">
         <button onclick="pali()">click</button>
-        <p id="ans">answer</p>
-        <script src="script.js">
+        <p id="l">answer</p>
+        <script>
             function pali()
                {
-                var before;var j;var num;sum=0;
+                var e;var j;f=0;
                 var n=document.getElementById("n").value;
-                   num=parseInt(n);
-                before=num;
-                 while(num>0)
+                e=n;
+                 while(n>0)
                  {
-                    j=num%10;
+                    j=n%10;
                     sum=(sum*10)+j;
-                    num=num/10;
+                    n=n/10;
                  }
-                 if(before==sum)
+                 if(e==f)
                  {
-                   document.getElementById("ans").innerHTML="palindrome";
+                   document.getElementById("l").innerHTML="palindrome";
                  }
                  else
                  {
-                    document.getElementById("ans").innerHTML="not plalindrome";
+                    document.getElementById("l").innerHTML="not plalindrome";
                  }
                  
                }
