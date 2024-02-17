@@ -4,29 +4,31 @@
     </head>
     <body>
         <p>enter the number</p>
-        <input id="n">
+        <input id="input">
         <button onclick="pali()">click</button>
-        <p id="l">answer</p>
+        <p id="answer">answer</p>
         <script>
             function pali()
                {
-                var before;var j;var num;sum=0;
-                var n=document.getElementById("n").value;
-                num=parseInt(n);
+                var before;
+                var num;
+                var sum=0;
+                 num=parseInt(document.getElementById("input").value);
+            
                 before=num;
-                 while(q>0)
+                 while(num>0)
                  {
-                    j=num%10;
-                    sum=(sum*10)+j;
-                    num=num/10;
+                    
+                    sum=(sum*10)+num%10;;
+                    num=parseInt(num/10);
                  }
                  if(before==sum)
                  {
-                   document.getElementById("l").innerHTML="palindrome";
+                   document.getElementById("answer").innerHTML="palindrome";
                  }
                  else
                  {
-                    document.getElementById("l").innerHTML="not plalindrome";
+                    document.getElementById("answer").innerHTML="not plalindrome";
                  }
                  
                }
